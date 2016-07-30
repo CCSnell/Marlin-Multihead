@@ -1089,8 +1089,9 @@ void lcd_cooldown() {
  *
  */
 void big(){
-    enqueue_and_echo_commands_P(PSTR("G28")); // move all axes home
-    enqueue_and_echo_commands_P(PSTR("M206 X-32 Y-64 Z0"));
+    //enqueue_and_echo_commands_P(PSTR("G0 Z40")); // move all axes home
+	enqueue_and_echo_commands_P(PSTR("G28")); // move all axes home
+    enqueue_and_echo_commands_P(PSTR("M206 X-32 Y-52 Z0"));
     enqueue_and_echo_commands_P(PSTR("M851 Z-19.5"));
 	enqueue_and_echo_commands_P(PSTR("M301 P24.19 I1.50 D97.48"));
 	enqueue_and_echo_commands_P(PSTR("M500"));
@@ -1103,7 +1104,7 @@ void small(){
 }
 void flexy(){
     enqueue_and_echo_commands_P(PSTR("G28")); // move all axes home
-    enqueue_and_echo_commands_P(PSTR("M206 X-32 Y-64 Z0"));
+    enqueue_and_echo_commands_P(PSTR("M206 X-32 Y-52 Z0"));
     enqueue_and_echo_commands_P(PSTR("M851 Z-26.14"));
 	enqueue_and_echo_commands_P(PSTR("M500"));
 }
